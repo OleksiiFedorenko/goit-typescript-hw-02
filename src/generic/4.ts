@@ -6,12 +6,12 @@ class Component<T extends object> {
   constructor(public props: T) {}
 }
 
-type Prop = {
+interface Prop {
   title: string;
-};
+}
 
 class Page extends Component<Prop> {
-  pageInfo() {
+  pageInfo(): void {
     console.log(this.props.title);
   }
 }
